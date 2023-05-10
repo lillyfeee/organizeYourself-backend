@@ -5,10 +5,17 @@ const toDoSchema = new Schema (
     name: {
         type: String,
         enum: ["today", "weekly", "general", "personal"],
-        default: "today"
+        default: "today",
+        required: true,
     },
-    isDone: false,
-    description: String,
+    description:{
+        type: String,
+        required: true,
+    },
+    completed: {
+        type: Boolean,
+        default: false,
+    }
 }
 );
 
