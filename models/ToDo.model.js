@@ -1,15 +1,11 @@
 const { Schema, model } = require("mongoose"); 
 
-const toDoSchema = new Schema (
+const tasksSchema = new Schema (
     {
-    name: {
+    tasks: {
         type: String,
-        enum: ["today", "weekly", "general", "personal"],
-        default: "today",
-        required: true,
-    },
-    description:{
-        type: String,
+        /* enum: ["today", "weekly", "goals", "personal"],
+        default: "today", */
         required: true,
     },
     completed: {
@@ -19,4 +15,4 @@ const toDoSchema = new Schema (
 }
 );
 
-module.exports = model("ToDo", toDoSchema)
+module.exports = model("Tasks", tasksSchema)

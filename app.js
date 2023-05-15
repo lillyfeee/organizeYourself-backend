@@ -21,7 +21,8 @@ app.use("/api", indexRoutes);
 const authRouter = require("./routes/auth.routes");       //  <== IMPORT
 app.use("/auth", authRouter);                             //  <== ADD
  
-
+const taskRouter = require ("./routes/toDo.routes");
+app.use("/task", taskRouter)
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
