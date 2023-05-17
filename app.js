@@ -24,6 +24,9 @@ app.use("/auth", authRouter);                             //  <== ADD
 const taskRouter = require ("./routes/toDo.routes");
 app.use("/task", taskRouter)
 
+const gratefulRouter = require ("./routes/grateful.route");
+app.use("/name", gratefulRouter)
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
